@@ -32,7 +32,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</flow>
 	<flow name="goodbyeFlow" doc:id="3ed9e73c-2bfc-44fc-9adb-4f1f5f2d957b" >
 		<http:listener doc:name="GET /goodbye" doc:id="bb72a77a-4441-4e58-932d-d84a916d2342" config-ref="HTTP_Listener_config" path="/goodbye" allowedMethods="GET" />
-		<set-payload value="goodbye" doc:name="goodbye" doc:id="9661b4dd-37c4-459f-b791-8355ffac70d8" />
+		<set-payload value='#[upper( "goodbye.")]' doc:name="goodbye" doc:id="9661b4dd-37c4-459f-b791-8355ffac70d8" />
 		<logger level="INFO" doc:name="Logger" doc:id="bcc9cae0-1315-4467-997f-a5f3806630ff" />
 	</flow>
 </mule>
